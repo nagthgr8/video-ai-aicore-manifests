@@ -1,0 +1,6 @@
+apiVersion: ai.sap.com/v1alpha1
+kind: Application
+metadata:
+  name: video-ai
+spec:
+  description: Video AI pipeline with orchestrator and GPU worker
