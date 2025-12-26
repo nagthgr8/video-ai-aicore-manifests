@@ -1,0 +1,36 @@
+apiVersion: ai.sap.com/v1alpha1
+kind: Executable
+metadata:
+  name: video-ai-orchestrator
+  labels:
+    scenarios.ai.sap.com/id: "video-ai-scenario"
+    ai.sap.com/version: "1.0.0"
+spec:
+  image: docker.io/nagthgr8/video-ai-orchestrator:1.0
+  command:
+    - python
+    - job_watcher.py
+  resources:
+    limits:
+      cpu: "2"
+      memory: "4Gi"
+  env:
+    - name: S3_ENDPOINT
+      valueFrom:
+        secretKeyRef:
+          name: video-ai-secrets
+          key: S3_ENDPOINT
+    - name: AWS_ACCESS_KEY_ID
+      valueFrom:
+        secretKeyRef:
+          name: video-ai-secrets
+          key: AWS_ACCESS_KEY_ID
+    - name: AWS_SECRET_ACCESS_KEY
+      valueFrom:
+        secretKeyRef:
+          name: video-ai-secrets
+          key: AWS_SECRET_ACCESS_KEY
+    - name: AWS_REGION
+      value: us-east-1
+    - name: GPU_WORKER_URL
+      value: http://video-ai-gpu-worker:8080
