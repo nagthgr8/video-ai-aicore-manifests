@@ -44,6 +44,11 @@ spec:
                 cpu: "2"
                 memory: "4Gi"
             env:
+              - name: S3_BUCKET
+                valueFrom:
+                  secretKeyRef:
+                    name: video-ai-secrets
+                    key: S3_BUCKET
               - name: S3_ENDPOINT
                 valueFrom:
                   secretKeyRef:
