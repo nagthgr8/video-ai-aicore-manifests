@@ -1,8 +1,7 @@
 apiVersion: ai.sap.com/v1alpha1
 kind: Scenario
 metadata:
-  name: video-ai-scenario  # This is the ID you will reference
-  namespace: default
+  name: video-ai-scenario
 spec:
   name: "Video AI Pipeline"
-  description: "Scenario for video processing with GPU workers"
+  description: "Test Scenario"
