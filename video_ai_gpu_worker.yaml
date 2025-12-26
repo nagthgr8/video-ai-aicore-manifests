@@ -16,7 +16,7 @@ spec:
     parameters:
       - name: image
         type: string
-        default: docker.io/nagthgr8/video-ai-gpu-worker:1.2
+        default: docker.io/ramcna/video-ai-gpu-worker:1.2
         description: Docker image for GPU worker
 
   template:
