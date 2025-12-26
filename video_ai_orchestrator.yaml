@@ -35,7 +35,7 @@ spec:
         minReplicas: 1
         maxReplicas: 1
         containers:
-          - name: orchestrator
+          - name: kserve-container
             image: {{inputs.parameters.image}}
             imagePullPolicy: Always
             command: ["python", "job_watcher.py"]
