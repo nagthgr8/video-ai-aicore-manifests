@@ -16,7 +16,7 @@ spec:
     parameters:
       - name: image
         type: string
-        default: docker.io/nagthgr8/video-ai-orchestrator:1.2
+        default: docker.io/ramcna/video-ai-orchestrator:1.2
         description: Docker image for video AI orchestration
 
   template:
