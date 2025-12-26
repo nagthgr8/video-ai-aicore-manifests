@@ -32,6 +32,8 @@ spec:
 
     spec: |
       predictor:
+        imagePullSecrets:
+          - name: whisper-registry      
         minReplicas: 1
         maxReplicas: 1
         containers:
