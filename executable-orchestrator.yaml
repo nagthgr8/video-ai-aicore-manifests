@@ -2,6 +2,9 @@ apiVersion: ai.sap.com/v1alpha1
 kind: Executable
 metadata:
   name: video-ai-orchestrator
+  labels:
+    scenarios.ai.sap.com/id: "video-ai-scenario"
+    ai.sap.com/version: "1.0.0"
 spec:
   image: docker.io/nagthgr8/video-ai-orchestrator:1.0
   command:
