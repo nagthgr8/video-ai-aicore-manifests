@@ -3,7 +3,7 @@ kind: ServingTemplate
 metadata:
   name: video-ai-orchestrator
   annotations:
-    scenarios.ai.sap.com/name: "video-ai-orchestration-v3"
+    scenarios.ai.sap.com/name: "video-ai-orchestration-v4"
     scenarios.ai.sap.com/description: "Video AI orchestration service"
     executables.ai.sap.com/name: "video-ai-orchestrator"
     executables.ai.sap.com/description: "Continuous video job watcher"
@@ -16,7 +16,7 @@ spec:
     parameters:
       - name: image
         type: string
-        default: docker.io/ramcna/video-ai-orchestrator:1.3
+        default: docker.io/ramcna/video-ai-orchestrator:1.4
         description: Docker image for video AI orchestration
 
   template:
