@@ -1,7 +1,7 @@
 apiVersion: ai.sap.com/v1alpha1
 kind: ServingTemplate
 metadata:
-  name: video-ai-gpu-worker-v9
+  name: video-ai-gpu-worker-v20
   annotations:
     scenarios.ai.sap.com/name: "video-ai-scenario"
     scenarios.ai.sap.com/description: "Video AI GPU worker service"
@@ -16,7 +16,7 @@ spec:
     parameters:
       - name: image
         type: string
-        default: docker.io/ramcna/video-ai-gpu-worker:1.9
+        default: docker.io/ramcna/video-ai-gpu-worker:2.0
         description: Docker image for GPU worker
 
   template:
