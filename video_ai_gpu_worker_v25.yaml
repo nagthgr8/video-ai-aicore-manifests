@@ -1,7 +1,7 @@
 apiVersion: ai.sap.com/v1alpha1
 kind: ServingTemplate
 metadata:
-  name: video-ai-gpu-worker-v24
+  name: video-ai-gpu-worker-v25
   annotations:
     scenarios.ai.sap.com/name: "video-ai-scenario"
     scenarios.ai.sap.com/description: "Video AI GPU worker service"
@@ -16,7 +16,7 @@ spec:
     parameters:
       - name: image
         type: string
-        default: docker.io/ramcna/video-ai-gpu-worker:2.4
+        default: docker.io/ramcna/video-ai-gpu-worker:2.5
         description: Docker image for GPU worker
 
   template:
@@ -28,7 +28,7 @@ spec:
         autoscaling.knative.dev/target: 1
         autoscaling.knative.dev/targetBurstCapacity: 1
       labels: |
-        {"ai.sap.com/resourcePlan": "infer.s"}
+        {"ai.sap.com/resourcePlan": "infer.m"}
 
     spec: |
       predictor:
@@ -46,8 +46,12 @@ spec:
             resources:
               limits:
                 nvidia.com/gpu: 1
-                memory: "10Gi"
-                cpu: "3"
+                memory: "25Gi"
+                cpu: "7"
+            requests:
+              nvidia.com/gpu: 1
+              memory: "12Gi"
+              cpu: "3"
             env:
               - name: S3_BUCKET
                 valueFrom:
