@@ -1,7 +1,7 @@
 apiVersion: ai.sap.com/v1alpha1
 kind: ServingTemplate
 metadata:
-  name: video-ai-orchestrator-v9
+  name: video-ai-orchestrator-v20
   annotations:
     scenarios.ai.sap.com/name: "video-ai-orchestration"
     scenarios.ai.sap.com/description: "Video AI orchestration service"
@@ -16,7 +16,7 @@ spec:
     parameters:
       - name: image
         type: string
-        default: docker.io/ramcna/video-ai-orchestrator:1.9
+        default: docker.io/ramcna/video-ai-orchestrator:2.0
         description: Docker image for video AI orchestration
 
   template:
