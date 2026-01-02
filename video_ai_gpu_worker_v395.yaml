@@ -28,7 +28,7 @@ spec:
         autoscaling.knative.dev/target: 1
         autoscaling.knative.dev/targetBurstCapacity: 1
       labels: |
-        {"ai.sap.com/resourcePlan": "infer.m"}
+        {"ai.sap.com/resourcePlan": "infer.l"}
 
     spec: |
       predictor:
@@ -46,12 +46,12 @@ spec:
             resources:
               limits:
                 nvidia.com/gpu: 1
-                memory: "25Gi"
-                cpu: "7"
+                memory: "64Gi"
+                cpu: "16"
             requests:
               nvidia.com/gpu: 1
-              memory: "12Gi"
-              cpu: "3"
+              memory: "32Gi"
+              cpu: "8"
             env:
               - name: S3_BUCKET
                 valueFrom:
