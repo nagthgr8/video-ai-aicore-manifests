@@ -1,7 +1,7 @@
 apiVersion: ai.sap.com/v1alpha1
 kind: ServingTemplate
 metadata:
-  name: video-ai-gpu-worker-v396
+  name: video-ai-gpu-worker-v397
   annotations:
     scenarios.ai.sap.com/name: "video-ai-scenario"
     scenarios.ai.sap.com/description: "Video AI GPU worker service"
@@ -46,8 +46,8 @@ spec:
             resources:
               limits:
                 nvidia.com/gpu: 1
-                memory: "64Gi"
-                cpu: "16"
+                memory: "58Gi"
+                cpu: "14"
             requests:
               nvidia.com/gpu: 1
               memory: "32Gi"
