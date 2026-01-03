@@ -28,7 +28,7 @@ spec:
         autoscaling.knative.dev/target: 1
         autoscaling.knative.dev/targetBurstCapacity: 1
       labels: 
-        ai.sap.com/resourcePlan: "infer.l"
+        ai.sap.com/resourcePlan: infer.l
 
     spec: |
       predictor:
